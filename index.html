@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Create Karnaugh Map</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/karnaughMap.css" />
+    <link rel="stylesheet" href="css/expression.css" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({messageStyle: "none", tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+  <body>
+
+  	<div id="view1">
+
+      <h1>Karnaugh map creator</h1>
+      <div class="option">
+    		<div id="function" class="setting">
+    			F(<span id="args"><span><input type="text" value="" placeholder="__"/></span></span>)
+    		</div>
+        <div class="description">//Function arguments</div>
+      </div>
+
+      <div class="option">
+        <div id="proportions" class="setting">
+            <span class="arrows">&lt;</span><span id="props"><span>0</span>×<span>0</span></span><span class="arrows">&gt;</span>
+    		</div>
+        <div class="description">//Map proportions</div>
+      </div>
+
+      <input type="button" id="createButton" value="create" />
+
+    </div>
+
+    <div id="view2">
+      <h1>Karnaugh Map</h1>
+    </div>
+
+    <script src="js/lib/jquery-1.11.2.min.js"></script>
+    <script data-main="js/main.js" src="js/lib/require.js"></script>
+  </body>
+</html>

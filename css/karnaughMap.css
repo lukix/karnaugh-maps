@@ -1,0 +1,47 @@
+.karnaughMap {
+  position: relative;
+  display: inline-block;
+  font-size: 1.6rem;
+
+  margin: 0 2rem 2rem 0;
+}
+.karnaughMap .functionName {
+
+  position: absolute;
+  bottom: -0.4em;
+  right: -0.4em;
+  background-color: rgba(255, 0, 0, 0.0);
+}
+.karnaughMap .functionName .functionNameContainer {
+  position: absolute;
+}
+.karnaughMap table {
+  border-collapse: collapse;
+}
+.karnaughMap td {
+  border: 1px solid;
+  width: 2rem;
+  height: 2rem;
+  padding: 0.6rem;
+  text-align: center;
+  cursor: pointer;
+}
+.karnaughMap td:hover {
+  background-color: #ddd;
+}
+.karnaughMap tr:first-child>td, td:first-child {
+  border: none;
+  font-size: 1.2rem;
+  cursor: default;
+}
+.karnaughMap tr:first-child>td, td:first-child:hover {
+  background-color: transparent;
+}
+.karnaughMap tr:first-child>td {
+  vertical-align: bottom;
+  padding-top: 0;
+}
+.karnaughMap td:first-child {
+  text-align: right;
+  padding-left: 0;
+}
