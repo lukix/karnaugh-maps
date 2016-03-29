@@ -45,6 +45,15 @@ define([
       table.appendChild(temp_tr);
     }
     comp.appendChild(table);
+
+    var functionNameElement = document.createElement("div");
+    functionNameElement.className = "functionName";
+    var functionNameContainerElement = document.createElement("div");
+    functionNameContainerElement.className = "functionNameContainer";
+    functionNameContainerElement.innerHTML = "F";
+    functionNameElement.appendChild(functionNameContainerElement);
+    comp.appendChild(functionNameElement);
+
     return comp;
   };
 /*
