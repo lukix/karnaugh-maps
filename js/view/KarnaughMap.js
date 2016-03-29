@@ -8,11 +8,13 @@ define([
   function KarnaughMap(name, variablesX, variablesY) {
     this.name = name;
     this.DOMelements = {};
-    this.DOMelements.main = this.createDOMelement(variablesX.length, variablesY.length);
+    this.DOMelements.main = this.createDOMelement(variablesX, variablesY);
     var variables = variablesX.concat(variablesY);
     this.logicObj = new TruthTable(variables);
 	}
-  KarnaughMap.prototype.createDOMelement = function (x, y) {
+  KarnaughMap.prototype.createDOMelement = function (varsX, varsY) {
+    var x = varsX.length;
+    var y = varsY.length;
     var greyCodeX = getGreyCode(x);
     var greyCodeY = getGreyCode(y);
     var comp = document.createElement("div");
@@ -20,6 +22,16 @@ define([
     var table = document.createElement("table");
     var tr1 = document.createElement("tr");
     var td1 = document.createElement("td");
+
+    //Arguments in first td element
+    var args_x_div = document.createElement("div");
+    var args_y_div = document.createElement("div");
+    var mapFunc = function (item) { return item.name };
+    args_x_div.innerHTML = varsX.map(mapFunc).reverse().join(" ");
+    args_y_div.innerHTML = varsY.map(mapFunc).reverse().join(" ");
+    td1.appendChild(args_x_div);
+    td1.appendChild(args_y_div);
+
     tr1.appendChild(td1);
     for(var i = 0; i < Math.pow(2, x); i++) {
       var temp_td = document.createElement("td");

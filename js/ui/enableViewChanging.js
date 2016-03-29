@@ -23,12 +23,12 @@ define([
         var inputs = document.getElementById("args").getElementsByTagName("span");
 
         for(var i = 0; i < x_prop; i++) {
-          arr1.push(
+          arr2.unshift(
             new BoolVariable(inputs[i].getElementsByTagName("input")[0].value)
           );
         }
         for(var i = x_prop; i < y_prop+x_prop; i++) {
-          arr2.push(
+          arr1.unshift(
             new BoolVariable(inputs[i].getElementsByTagName("input")[0].value)
           );
         }
